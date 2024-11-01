@@ -37,7 +37,7 @@ const privateKeyProvider = new EthereumPrivateKeyProvider({
 
 const web3auth = new Web3Auth({
   clientId,
-  web3AuthNetwork: WEB3AUTH_NETWORK.TESTNET, // Changed from SAPPHIRE_MAINNET to TESTNET
+  web3AuthNetwork: WEB3AUTH_NETWORK.TESTNET, // Changed from SAPPHIRE_MAINNET to TESTNET or web3AuthNetwork: "testnet",
   privateKeyProvider,
 });
 
@@ -124,6 +124,7 @@ export default function Header({ onMenuClick, totalEarnings }: HeaderProps) {
     // Add an event listener for balance updates
     const handleBalanceUpdate = (event: CustomEvent) => {
       setBalance(event.detail);
+      
     };
 
     window.addEventListener('balanceUpdated', handleBalanceUpdate as EventListener);
@@ -217,8 +218,8 @@ export default function Header({ onMenuClick, totalEarnings }: HeaderProps) {
           <Link href="/" className="flex items-center">
             <Leaf className="h-6 w-6 md:h-8 md:w-8 text-green-500 mr-1 md:mr-2" />
             <div className="flex flex-col">
-              <span className="font-bold text-base md:text-lg text-gray-800">Zero2Hero</span>
-              <span className="text-[8px] md:text-[10px] text-gray-500 -mt-1">ETHOnline24</span>
+              <span className="font-bold text-base md:text-lg text-gray-800">Ecofrnd</span>
+              <span className="text-[8px] md:text-[10px] text-gray-500 -mt-1">ETH</span>
             </div>
           </Link>
         </div>
@@ -229,7 +230,7 @@ export default function Header({ onMenuClick, totalEarnings }: HeaderProps) {
                 type="text"
                 placeholder="Search..."
                 className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
+              />              
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
             </div>
           </div>

@@ -81,9 +81,9 @@ export default function Home() {
   return (
     <div className={`container mx-auto px-4 py-16 ${poppins.className}`}>
       <section className="text-center mb-20">
-        <AnimatedGlobe />
+        {/* <AnimatedGlobe /> */}
         <h1 className="text-6xl font-bold mb-6 text-gray-800 tracking-tight">
-          Zero-to-Hero <span className="text-green-600">Waste Management</span>
+          AI powered <span className="text-green-600">Eco-frnd</span>
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
           Join our community in making waste management more efficient and rewarding!
